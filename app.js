@@ -1,15 +1,10 @@
 const os = require('os');
 const fs = require('fs');
+const mi = require('./mito.js');
 
-const cpu = os.cpus();
-const sistema = os.platform();
-const usuario = os.hostname();
+// Consume what was expose from the module 'mito.js'
+mi.greet();
+console.log(mi.subscribers);
 
-console.log(cpu);
-console.log(sistema);
-console.log(usuario);
-
-fs.appendFile('public/mitoCode.txt', `Informacion del CPU ${JSON.stringify(cpu)}`, function (error) {
-    if (error)
-        console.log(`Error '${error}' al crear el archivo`);
-});
+// Here we can see what is 'module'
+console.log(module);
