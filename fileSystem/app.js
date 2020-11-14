@@ -1,14 +1,14 @@
 const fs = require('fs');
 
-console.log('Iniciado');
+console.log('Start');
 
 const fileData = fs.readFileSync('./data.txt', 'utf-8');
 
 console.log(fileData);
 
-fs.rename('./data.txt', 'dataRenamed.txt', (error, data) => {
-    if (error) throw error;
-    console.log('Renamed!');
+fs.appendFile('./data.txt', '. This is a new text!', (e) => {
+    if(e) throw e;
+    console.log('Appended new text!');
 });
 
-console.log('Finalizado');
+console.log('End');
