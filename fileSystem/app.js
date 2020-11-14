@@ -1,14 +1,22 @@
 const fs = require('fs');
 
 console.log('Start');
-
-const fileData = fs.readFileSync('./data.txt', 'utf-8');
-
-console.log(fileData);
-
-fs.appendFile('./data.txt', '\nThis is a new text!', (e) => {
-    if(e) console.log(e);
-    console.log('Appended new text!');
+const fileName = 'newFile.txt';
+fs.appendFile(fileName, 'This is the file content to delete', (error) => {
+    if (error) {
+        throw error;
+    } else {
+        fs.readFile(fileName, 'utf-8', (error, data) => {
+            if (error) {
+                throw error;
+            } else {
+                console.log(data);
+                fs.unlink(fileName, (error) => {
+                    if (error) throw error;
+                });
+            }
+        });
+    };
 });
 
 console.log('End');
