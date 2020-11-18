@@ -1,0 +1,23 @@
+{
+  "name": "nodejstutorial",
+  "version": "1.0.0",
+  "description": "Es para cubrir el tutorial de nodejs de [MitoCode](https://www.youtube.com/watch?v=VHOd-RBj1MA&list=PLvimn1Ins-41lVr-SPWF1mdNTzog05TcA)",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarabreu19/nodeJsTutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarabreu19/nodeJsTutorial/issues"
+  },
+  "homepage": "https://github.com/oscarabreu19/nodeJsTutorial#readme"
+}
