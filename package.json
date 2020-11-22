@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "lodash": "^4.17.20",
+    "nodemon": "^2.0.6",
     "yargs": "^16.1.1"
   },
   "devDependencies": {},
